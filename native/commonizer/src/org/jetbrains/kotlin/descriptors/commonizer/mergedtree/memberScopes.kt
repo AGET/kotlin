@@ -82,6 +82,18 @@ internal data class FunctionApproximationKey(
         function.valueParameters.map { it.name.intern() to it.type.fqNameWithTypeParameters },
         function.extensionReceiverParameter?.type?.fqNameWithTypeParameters
     )
+
+//    companion object {
+//        fun create(function: SimpleFunctionDescriptor): FunctionApproximationKey {
+//            val key = FunctionApproximationKey(function)
+//
+//            if (key.name.asString() == "iconv") {
+//                println("HERE")
+//            }
+//
+//            return key
+//        }
+//    }
 }
 
 /** Used for approximation of [ConstructorDescriptor]s before running concrete [Commonizer]s */
